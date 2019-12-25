@@ -4,7 +4,7 @@
             <div slot="title">{{$t('m.Compiler')}} & {{$t('m.Judger')}}</div>
             <div class="content markdown-body">
                 <ul>
-                    <li v-for="lang in languages">{{lang.name}} ( {{lang.description}} )
+                    <li v-for="lang in languages"> {{lang.name}} ( {{lang.description}} )
                         <pre>{{lang.config.compile.compile_command}}</pre>
                     </li>
                 </ul>
@@ -51,6 +51,11 @@
       utils.getLanguages().then(languages => {
         next(vm => {
           vm.languages = languages;
+          // 移除了Python2
+          let lastElement = languages[languages.length - 1];
+          vm.languages.pop();
+          vm.languages.pop();
+          vm.languages.push(lastElement);
         });
       });
     }
