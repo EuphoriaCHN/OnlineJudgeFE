@@ -2,6 +2,8 @@
 // Template version: 1.1.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
+process.env.TARGET = 'http://192.144.135.131:11080';
+
 const path = require('path');
 const commonProxy = {
   onProxyReq: (proxyReq, req, res) => {

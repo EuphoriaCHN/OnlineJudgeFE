@@ -18,22 +18,22 @@
                 <Icon type="ios-pulse-strong"></Icon>
                 {{$t('m.NavStatus')}}
             </Menu-item>
-            <Menu-item name="acm-rank">
-                <Icon type="podium"></Icon>
-                {{$t('m.ACM_Rank')}}
-            </Menu-item>
-<!--            <Submenu name="rank">-->
-<!--                <template slot="title">-->
-<!--                    <Icon type="podium"></Icon>-->
-<!--                    {{$t('m.Rank')}}-->
-<!--                </template>-->
-<!--                <Menu-item name="/acm-rank">-->
-<!--                    {{$t('m.ACM_Rank')}}-->
-<!--                </Menu-item>-->
-<!--                <Menu-item name="/oi-rank">-->
-<!--                    {{$t('m.OI_Rank')}}-->
-<!--                </Menu-item>-->
-<!--            </Submenu>-->
+<!--            <Menu-item name="acm-rank">-->
+<!--                <Icon type="podium"></Icon>-->
+<!--                {{$t('m.ACM_Rank')}}-->
+<!--            </Menu-item>-->
+            <Submenu name="rank">
+                <template slot="title">
+                    <Icon type="podium"></Icon>
+                    {{$t('m.Rank')}}
+                </template>
+                <Menu-item name="/acm-rank">
+                    {{$t('m.ACM_Rank')}}
+                </Menu-item>
+                <Menu-item name="/oi-rank">
+                    {{$t('m.OI_Rank')}}
+                </Menu-item>
+            </Submenu>
             <Submenu name="about">
                 <template slot="title">
                     <Icon type="information-circled"></Icon>
